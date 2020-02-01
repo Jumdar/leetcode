@@ -5,7 +5,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        dp = [1]*n + [[1] + [0]*(n-1) for _ in range(m-1)]
+        dp = [[1]*n] + [[1] + [0]*(n-1) for _ in range(m-1)]
 
         for i in range(m-1):
             for j in range(n-1):
